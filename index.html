@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maria Mora de Aysa — Event Production</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;1,6..96,400&amp;family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; background: #0A0A0A; }
+  body { margin: 0; background: #0A0A0A; color: #F4F2ED; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #F4F2ED; text-decoration: none; }
+  a:hover { color: #FF2D6F; }
+  ::selection { background: #F5E03D; color: #0A0A0A; }
+  @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes caseIn { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .js-reveal [data-reveal] { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.2,0.8,0.2,1), transform 0.8s cubic-bezier(0.2,0.8,0.2,1); }
+  .js-reveal [data-reveal][data-shown] { opacity: 1; transform: none; }
+</style>
+</helmet>
+
+<div style="font-family: Archivo, Helvetica, sans-serif; background: #0A0A0A; color: #F4F2ED; overflow-x: hidden;">
+
+  <header style="display: flex; justify-content: space-between; align-items: baseline; padding: 18px 4vw; border-bottom: 1px solid #2A2A2A; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; position: sticky; top: 0; background: rgba(10,10,10,0.92); backdrop-filter: blur(8px); z-index: 40;">
+    <span>Maria Mora de Aysa</span>
+    <span style="display: flex; gap: 26px; flex-wrap: wrap; justify-content: flex-end;">
+      <a href="#index" style="color: #8E8B85;" style-hover="color: #F5E03D;">Selected Events</a>
+      <a href="#expertise" style="color: #8E8B85;" style-hover="color: #1FD4E6;">Expertise</a>
+      <a href="#contact" style="color: #8E8B85;" style-hover="color: #FF2D6F;">Contact</a>
+    </span>
+  </header>
+
+  <section style="padding: 4vw 4vw 3vw; position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -8vw; right: -6vw; width: 46vw; height: 46vw; border-radius: 50%; background: radial-gradient(circle at 50% 50%, rgba(255,45,111,0.22), rgba(10,10,10,0) 68%); pointer-events: none;"></div>
+    <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #6E6B66; margin-bottom: 2.5vw; position: relative;">
+      <span>EVENT PORTFOLIO</span>
+      <span style="color: #F5E03D;">SPAIN· PORTUGAL</span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3vw; align-items: end; position: relative;">
+      <h1 style="font-family: 'Bodoni Moda', serif; font-weight: 500; font-size: clamp(52px, 9.6vw, 168px); line-height: 0.84; letter-spacing: -0.02em; margin: 0; text-transform: uppercase;">
+        Maria<br><span style="color: #FF2D6F;">Mora</span><br><span style="font-style: italic; font-weight: 400; color: #1FD4E6;">de Aysa</span>
+      </h1>
+      <div style="position: relative; align-self: end; justify-self: center; width: 100%; max-width: 420px;">
+        <div style="position: absolute; left: 8%; bottom: 6%; width: 74%; height: 76%; background: #F5E03D;"></div>
+        <div style="position: absolute; left: 0; bottom: 0; width: 100%; height: 100%; background-image: repeating-linear-gradient(90deg, rgba(31,212,230,0.55) 0 1px, transparent 1px 9px); mix-blend-mode: screen; pointer-events: none;"></div>
+        <img alt="Maria Mora de Aysa" src="img/maria-portrait.png" style="position: relative; display: block; width: 100%; height: auto; filter: grayscale(1) contrast(1.12);">
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4vw; margin-top: 3vw; align-items: end; border-top: 1px solid #2A2A2A; padding-top: 22px; position: relative;">
+      
+      <p style="font-family: 'Bodoni Moda', serif; font-size: clamp(19px, 2.1vw, 34px); line-height: 1.28; margin: 0; text-wrap: pretty;">
+        From concept to execution, I create and manage experiences that bring people, brands and ideas together.
+      </p>
+    </div>
+  </section>
+
+  <sc-if value="{{ showStats }}" hint-placeholder-val="{{ true }}">
+  <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); border-top: 1px solid #2A2A2A; border-bottom: 1px solid #2A2A2A;">
+    <div data-reveal="" style="padding: 2.6vw 1.6vw; border-right: 1px solid #2A2A2A;">
+      <div style="font-family: 'Bodoni Moda', serif; font-size: clamp(38px, 5vw, 84px); line-height: 1; color: #F5E03D; text-align: center">6+</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #8E8B85; margin-top: 10px; text-align: center">EVENTS ORGANISED</div>
+    </div>
+    <div data-reveal="" style="padding: 2.6vw 1.6vw; border-right: 1px solid #2A2A2A;">
+      <div style="font-family: 'Bodoni Moda', serif; font-size: clamp(38px, 5vw, 84px); line-height: 1; color: #FF2D6F; text-align: center">800+</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #8E8B85; margin-top: 10px; text-align: center">GUESTS DELIGHTED</div>
+    </div>
+    <div data-reveal="" style="padding: 2.6vw 1.6vw; border-right: 1px solid #2A2A2A;">
+      <div style="font-family: 'Bodoni Moda', serif; font-size: clamp(38px, 5vw, 84px); line-height: 1; color: #1FD4E6; text-align: center">4+</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #8E8B85; margin-top: 10px; text-align: center">Cities</div>
+    </div>
+    
+  </section>
+  </sc-if>
+
+  <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 4vw; padding: 5vw 4vw; border-bottom: 1px solid #2A2A2A;">
+    
+    <p style="font-size: clamp(15px, 1.35vw, 20px); line-height: 1.62; margin: 0; text-wrap: pretty; color: #E4E1DB;">I create experiences from concept to execution, coordinating creative, logistical, hospitality and experiential elements to deliver engaging events.</p><p style="font-size: clamp(15px, 1.35vw, 20px); line-height: 1.62; margin: 0; text-wrap: pretty; color: #E4E1DB;">My experience covers corporate events, incentive trips, experiential activations, hospitality, content, entertainment and multi-location events, working across different scales and formats.</p>
+  </section>
+
+  <section id="index" style="padding: 4vw 4vw 6vw;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6B66; border-bottom: 1px solid #F4F2ED; padding-bottom: 14px;">
+      <span style="color: rgb(244, 242, 237);">EVENTS MANAGED</span>
+      <span>CLICK ON A PROJECT TO LEARN MORE&nbsp;</span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3vw; margin-top: 2.4vw; align-items: start;">
+
+      <div style="position: sticky; top: 84px; display: flex; flex-direction: column;">
+        <sc-for list="{{ events }}" as="ev" hint-placeholder-count="7">
+          <div onClick="{{ ev.select }}" onMouseEnter="{{ ev.select }}" style="display: grid; grid-template-columns: 46px minmax(0, 1fr) 10px; align-items: center; gap: 14px; padding: 1.05em 0; border-bottom: 1px solid #232323; cursor: pointer;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: {{ ev.color }};">{{ ev.num }}</span>
+            <span style="font-family: 'Bodoni Moda', serif; font-size: clamp(21px, 2.1vw, 34px); line-height: 1.06; text-transform: uppercase; letter-spacing: -0.01em; transition: color 0.3s ease, transform 0.35s cubic-bezier(0.2,0.8,0.2,1); color: {{ ev.titleColor }}; transform: {{ ev.shift }};">{{ ev.title }}</span>
+            <span style="width: 10px; height: 10px; transition: background 0.3s ease; background: {{ ev.dot }};"></span>
+            <span style="grid-column: 2; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6E6B66; margin-top: 6px;">{{ ev.meta }}</span>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1.6vw;">
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2vw; align-items: end; border-top: 1px solid {{ current.color }}; padding-top: 1.4vw;">
+          <div>
+            <h3 style="font-family: 'Bodoni Moda', serif; font-weight: 500; font-size: clamp(26px, 3.2vw, 52px); line-height: 0.94; margin: 0; text-transform: uppercase; color: {{ current.color }};">{{ current.title }}</h3>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #8E8B85; margin-top: 12px;">{{ current.meta }}</div>
+          </div>
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6B66;">My Role</div>
+            <p style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: clamp(15px, 1.4vw, 22px); line-height: 1.24; margin: 0.5em 0 0; color: {{ current.color }};">{{ current.role }}</p>
+          </div>
+        </div>
+
+        <p style="font-family: 'Bodoni Moda', serif; font-size: clamp(17px, 1.7vw, 26px); line-height: 1.3; margin: 0; max-width: 56ch; color: #E4E1DB; text-wrap: pretty;">{{ current.intro }}</p>
+
+        <sc-if value="{{ hasImages }}" hint-placeholder-val="{{ true }}">
+          <div style="aspect-ratio: 16 / 9; overflow: hidden; background: #161616 center / cover no-repeat; background-image: {{ current.bg1 }};"></div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.6vw;">
+            <div style="aspect-ratio: 4 / 3; overflow: hidden; background: #161616 center / cover no-repeat; background-image: {{ current.bg2 }};"></div>
+            <div style="aspect-ratio: 4 / 3; overflow: hidden; background: #161616 center / cover no-repeat; background-image: {{ current.bg3 }};"></div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ noImages }}" hint-placeholder-val="{{ false }}">
+          <div style="aspect-ratio: 16 / 9; display: flex; flex-direction: column; justify-content: flex-end; padding: 2vw; background: {{ current.color }}; color: #0A0A0A;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;">In development — imagery to come</div>
+            <div style="font-family: 'Bodoni Moda', serif; font-size: clamp(44px, 7vw, 120px); line-height: 1;">2026</div>
+          </div>
+        </sc-if>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2.4vw; align-items: start; margin-top: 0.6vw;">
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6B66; border-top: 1px solid #F4F2ED; padding-top: 10px; display: flex; justify-content: space-between;">
+              <span>Scope</span>
+            </div>
+            <sc-for list="{{ current.scope }}" as="s" hint-placeholder-count="0">
+              <div style="display: grid; grid-template-columns: 2.8em 1fr; gap: 0.9em; padding: 0.9em 0; border-bottom: 1px solid #1E1E1E;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; padding-top: 0.3em; color: {{ s.color }};">{{ s.n }}</span>
+                <div>
+                  <p style="font-size: 14.5px; line-height: 1.52; margin: 0; color: #CFCCC6; text-wrap: pretty;">{{ s.text }}</p>
+                  <sc-if value="{{ s.hasSub }}" hint-placeholder-val="{{ false }}">
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;">
+                      <sc-for list="{{ s.sub }}" as="t" hint-placeholder-count="0">
+                        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid #333; padding: 4px 7px; color: #A9A6A0;">{{ t }}</span>
+                      </sc-for>
+                    </div>
+                  </sc-if>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          <sc-if value="{{ hasImages }}" hint-placeholder-val="{{ true }}">
+            <div style="position: sticky; top: 84px; width: 100%; max-width: 300px; margin: 0 auto; aspect-ratio: 3 / 4; overflow: hidden; background: #161616 center / cover no-repeat; background-image: {{ current.bg4 }};"></div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="expertise" style="background: #F5E03D; color: #0A0A0A; padding: 5vw 4vw 6vw;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(10,10,10,0.6); margin-bottom: 3vw;">
+      <span style="color: rgb(10, 10, 10);">My Event Expertise</span>
+      <span><br></span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: rgba(10,10,10,0.22);">
+      <div data-reveal="" style="background: #F5E03D; padding: 2.4vw 2vw 3vw;">
+        <div style="font-family: 'Bodoni Moda', serif; font-size: clamp(30px, 3.4vw, 56px); line-height: 1; margin-bottom: 0.5em; color: #0A0A0A;">01</div>
+        <h3 style="font-family: 'Bodoni Moda', serif; font-weight: 500; font-size: clamp(22px, 2.1vw, 34px); line-height: 1.06; margin: 0 0 0.7em;">Event Direction</h3>
+        <p style="font-size: 15px; line-height: 1.6; color: #4A4108; margin: 0; max-width: 34ch;">Leading events from initial concept through to execution.</p>
+      </div>
+      <div data-reveal="" style="background: #F5E03D; padding: 2.4vw 2vw 3vw;">
+        <div style="font-family: 'Bodoni Moda', serif; font-size: clamp(30px, 3.4vw, 56px); line-height: 1; margin-bottom: 0.5em; color: #0A0A0A;">02</div>
+        <h3 style="font-family: 'Bodoni Moda', serif; font-weight: 500; font-size: clamp(22px, 2.1vw, 34px); line-height: 1.06; margin: 0 0 0.7em;">Experience Design</h3>
+        <p style="font-size: 15px; line-height: 1.6; color: #4A4108; margin: 0; max-width: 34ch;">Creating memorable guest journeys through content, activities, hospitality and entertainment.</p>
+      </div>
+      <div data-reveal="" style="background: #F5E03D; padding: 2.4vw 2vw 3vw;">
+        <div style="font-family: 'Bodoni Moda', serif; font-size: clamp(30px, 3.4vw, 56px); line-height: 1; margin-bottom: 0.5em; color: #0A0A0A;">03</div>
+        <h3 style="font-family: 'Bodoni Moda', serif; font-weight: 500; font-size: clamp(22px, 2.1vw, 34px); line-height: 1.06; margin: 0 0 0.7em;">Creative Production</h3>
+        <p style="font-size: 15px; line-height: 1.6; color: #4A4108; margin: 0; max-width: 34ch;">Developing visual concepts, spatial experiences, stage design and event content.</p>
+      </div>
+      <div data-reveal="" style="background: #F5E03D; padding: 2.4vw 2vw 3vw;">
+        <div style="font-family: 'Bodoni Moda', serif; font-size: clamp(30px, 3.4vw, 56px); line-height: 1; margin-bottom: 0.5em; color: #0A0A0A;">04</div>
+        <h3 style="font-family: 'Bodoni Moda', serif; font-weight: 500; font-size: clamp(22px, 2.1vw, 34px); line-height: 1.06; margin: 0 0 0.7em;">Supplier &amp; Partner Management</h3>
+        <p style="font-size: 15px; line-height: 1.6; color: #4A4108; margin: 0; max-width: 34ch;">Sourcing, briefing and coordinating venues, agencies, production companies and suppliers.</p>
+      </div>
+      <div data-reveal="" style="background: #F5E03D; padding: 2.4vw 2vw 3vw;">
+        <div style="font-family: 'Bodoni Moda', serif; font-size: clamp(30px, 3.4vw, 56px); line-height: 1; margin-bottom: 0.5em; color: #0A0A0A;">05</div>
+        <h3 style="font-family: 'Bodoni Moda', serif; font-weight: 500; font-size: clamp(22px, 2.1vw, 34px); line-height: 1.06; margin: 0 0 0.7em;">Hospitality &amp; Logistics</h3>
+        <p style="font-size: 15px; line-height: 1.6; color: #4A4108; margin: 0; max-width: 34ch;">Managing accommodation, flights, restaurants, catering and guest logistics.</p>
+      </div>
+      <div data-reveal="" style="background: #F5E03D; padding: 2.4vw 2vw 3vw;">
+        <div style="font-family: 'Bodoni Moda', serif; font-size: clamp(30px, 3.4vw, 56px); line-height: 1; margin-bottom: 0.5em; color: #0A0A0A;">06</div>
+        <h3 style="font-family: 'Bodoni Moda', serif; font-weight: 500; font-size: clamp(22px, 2.1vw, 34px); line-height: 1.06; margin: 0 0 0.7em;">Incentive &amp; Experiential Travel</h3>
+        <p style="font-size: 15px; line-height: 1.6; color: #4A4108; margin: 0; max-width: 34ch;">Designing complete travel experiences combining culture, gastronomy, adventure and networking.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" style="padding: 6vw 4vw 3vw;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6B66; border-bottom: 1px solid #2A2A2A; padding-bottom: 14px;">Contact</div>
+    <h2 style="margin: 3vw 0 4vw; font-family: Archivo, Helvetica, sans-serif; font-weight: 800; text-transform: uppercase; font-size: clamp(44px, 11.5vw, 200px); line-height: 0.82; letter-spacing: -0.045em;">
+      Let's build<br><span style="color: transparent; -webkit-text-stroke: 1.5px #FF2D6F;">the next</span> <span style="color: #FF2D6F;">one</span>
+    </h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2vw; border-top: 1px solid #2A2A2A; padding-top: 24px;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6B66; margin-bottom: 10px;">Email</div>
+        <a href="mailto:mariamoraaysa@gmail.com" style="font-size: clamp(15px, 1.25vw, 19px); color: #F4F2ED; border-bottom: 1px solid #F5E03D;" style-hover="color: #F5E03D;">mariamoraaysa@gmail.com</a>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E6B66; margin-bottom: 10px;">PHONE NUMBER</div>
+        <a href="tel:+34623236652" style="font-size: clamp(15px, 1.25vw, 19px); color: #F4F2ED;" style-hover="color: #1FD4E6;">+34 623236652</a>
+      </div>
+      
+      
+    </div>
+    <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #6E6B66; margin-top: 6vw; border-top: 1px solid #2A2A2A; padding-top: 18px;">
+      
+      
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showStats&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;}}">
+const EVENTS = [
+  {
+    num: "01", title: "Preparados para 2025", color: "#FF2D6F", anchor: "event-01",
+    meta: "Barcelona & Madrid · 4 sessions · 400+ attendees",
+    intro: "A large-scale corporate event delivered across two cities, with four sessions in total, two in Barcelona and two in Madrid, welcoming approximately 200 attendees per city.",
+    role: "Full event direction & development",
+    images: ["img/preparados-para-2025-16.jpg", "img/preparados-para-2025-04.jpg", "img/preparados-para-2025-11.jpg", "img/preparados-para-2025-18.jpg"],
+    scope: [
+      "Led the overall planning, development and execution of the event across both cities.",
+      "Coordinated with Amex Global Business to secure the event locations.",
+      "Worked with Mostaza, the visual production agency, on the development of event materials and visual elements.",
+      "Coordinated a third-party production agency responsible for stage design, screens, lighting, seating and technical production, including a two-stage setup for the presentations.",
+      "Managed stage direction, including lighting cues and scene changes throughout the event.",
+      "Coordinated hotel sourcing and accommodation in Barcelona and Madrid.",
+      "Managed direct communication with actors involved in the presentations.",
+      "Coordinated the development and production of personalised attendee gifts.",
+      "Managed speaker accommodation and logistics.",
+      "Selected and approved the catering proposal.",
+      "Directed the creative development of the event recap video."
+    ]
+  },
+  {
+    num: "02", title: "Preparados para 2026", color: "#F5E03D", anchor: "event-02",
+    meta: "Madrid · 300 attendees · Large-scale event",
+    intro: "A large-scale corporate event hosted at a major venue in Madrid, combining creative production, influential speakers and a carefully designed guest experience.",
+    role: "Event direction & creative development",
+    images: ["img/preparados-para-2026-01.jpg", "img/preparados-para-2026-02.jpg", "img/preparados-para-2026-04.jpg", "img/preparados-para-2026-03.jpg"],
+    scope: [
+      "Led the overall development of the event from concept through execution.",
+      "Worked closely with an external agency to develop the event concept, creative direction and execution possibilities.",
+      "Coordinated stage direction, including lighting cues and scene changes.",
+      "Managed direct communication with influential Spanish speakers and presenters.",
+      "Coordinated the development and production of attendee gifts.",
+      "Selected and approved the catering.",
+      "Coordinated accommodation and logistics for speakers and the responsible event team.",
+      "Ensured creative, production and logistical elements came together into one cohesive event experience."
+    ]
+  },
+  {
+    num: "03", title: "Club AOA · Los 30", color: "#1FD4E6", anchor: "event-03",
+    meta: "Madrid · Santander Golf Club · 30 attendees",
+    intro: "An intimate corporate experience created for accessories managers from across Spain, combining business, networking, product experience and leisure at Santander Golf Club.",
+    role: "End-to-end event development & production",
+    images: ["img/club-aoa-06.jpg", "img/club-aoa-09.jpg", "img/club-aoa-02.jpg", "img/club-aoa-10.jpg"],
+    scope: [
+      "Managed the event from concept and planning through to execution.",
+      "Selected and coordinated the event location at Santander Golf Club.",
+      "Developed the accessories display / showroom, integrating the products into the event environment.",
+      "Coordinated the golf activities and team format.",
+      "Managed catering and restaurant experiences.",
+      "Coordinated the event content and overall experience programme.",
+      "Managed speaker flights, accommodation and logistics.",
+      "Coordinated suppliers and different event components to create a seamless guest experience."
+    ]
+  },
+  {
+    num: "04", title: "Experience Challenge", color: "#A8F03C", anchor: "event-04",
+    meta: "Lisbon · Incentive Trip · 15 attendees",
+    intro: "An exclusive incentive trip for the top-performing dealer teams in Spain, designed around hospitality, gastronomy, culture and adventure.",
+    role: "End-to-end incentive trip planning & management",
+    images: ["img/experience-challenge-02.jpg", "img/experience-challenge-01.jpg", "img/experience-challenge-03.jpg", "img/experience-challenge-04.jpg"],
+    scope: [
+      "Managed the complete participant journey, from travel logistics to the on-site experience.",
+      "Coordinated flights and travel arrangements.",
+      "Managed accommodation and guest logistics.",
+      "Selected and coordinated restaurants and menus throughout the trip.",
+      "Designed and coordinated the daily itinerary and routes.",
+      { text: "Planned and coordinated a range of experiential activities, including:", sub: ["Wine tastings", "Boat experiences", "Jeep excursions", "Quad activities", "Museum visits", "Castle and cultural visits"] },
+      "Coordinated suppliers, activities and logistics throughout the trip.",
+      "Designed the overall flow of the experience, balancing hospitality, entertainment, culture and adventure."
+    ]
+  },
+  {
+    num: "05", title: "Driving the Change", color: "#FF6A1A", anchor: "event-05",
+    meta: "Soho House · 20 attendees",
+    intro: "A corporate experience designed around interactive spaces, expert-led content and creative activities, creating a more informal and engaging environment for attendees.",
+    role: "Experience development & event production",
+    images: ["img/driving-the-change-01.jpg", "img/driving-the-change-03.jpg", "img/driving-the-change-04.jpg", "img/driving-the-change-05.jpg"],
+    scope: [
+      "Designed the spatial distribution of the event, creating different environments for the various activities and sessions.",
+      "Coordinated the integration of an AI expert into the event programme.",
+      "Developed and coordinated a live painting experience, including the artist / professor.",
+      "Coordinated theoretical talks and content sessions.",
+      "Managed catering and the hospitality experience.",
+      "Ensured the different spaces, activities and content worked together as a cohesive experience."
+    ]
+  },
+  {
+    num: "06", title: "Aliados CX", color: "#B36BFF", anchor: "event-06",
+    meta: "Madrid · Barcelona · Seville · Rioja · 60 attendees",
+    intro: "A multi-location event experience delivered across four Spanish destinations, combining business content, hospitality and unexpected entertainment experiences.",
+    role: "Visual concept, venue sourcing & experience coordination",
+    images: ["img/aliados-06.jpg", "img/aliados-08.jpg", "img/aliados-03.jpg", "img/aliados-05.jpg"],
+    scope: [
+      "Led the visual development of the events across the different locations.",
+      "Managed venue sourcing according to the requirements and concept of each event.",
+      "Coordinated audiovisual suppliers and technical requirements.",
+      "Selected and coordinated live entertainment, including opera singers as a surprise experience for attendees.",
+      "Managed catering and hospitality.",
+      "Ensured visual, audiovisual, entertainment and catering elements were aligned across the different locations.",
+      "Adapted the experience to each destination while maintaining a consistent overall concept."
+    ]
+  },
+  {
+    num: "07", title: "Bloom Retreat", color: "#FF3DDA", anchor: "event-07",
+    meta: "Upcoming · In Development · 2026",
+    intro: "A new retreat concept currently in development, combining wellness, business, hospitality and curated experiences into one cohesive guest journey.",
+    role: "Event concept, creative development & experience design",
+    images: [],
+    scope: [
+      "Developing the overall event concept and creative direction.",
+      "Location sourcing and selection.",
+      "Accommodation planning.",
+      "Developing the visual concept and branding.",
+      "Designing the content and experience programme.",
+      "Coordinating yoga and wellness activities.",
+      "Developing a Business Corner combining networking and professional content.",
+      "Planning meals and the overall hospitality experience.",
+      "Creating a cohesive guest journey across wellness, business, hospitality and visual identity."
+    ]
+  }
+];
+
+const url = (s) => (s ? 'url("' + s + '")' : "none");
+
+class Component extends DCLogic {
+  state = { sel: 0 };
+
+  componentDidMount() {
+    document.body.classList.add("js-reveal");
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (en.isIntersecting) {
+          en.target.setAttribute("data-shown", "");
+          this._io.unobserve(en.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -12% 0px", threshold: 0.08 });
+    this._scan = () => {
+      document.querySelectorAll("[data-reveal]:not([data-shown])").forEach((el) => this._io.observe(el));
+    };
+    this._scan();
+    this._t = setInterval(this._scan, 1200);
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._t) clearInterval(this._t);
+  }
+
+  renderVals() {
+    const sel = this.state.sel;
+    const ev = EVENTS[sel];
+    const im = ev.images;
+
+    const events = EVENTS.map((e, i) => ({
+      num: e.num, title: e.title, meta: e.meta, color: e.color,
+      titleColor: i === sel ? e.color : "#F4F2ED",
+      shift: i === sel ? "translateX(10px)" : "none",
+      dot: i === sel ? e.color : "transparent",
+      select: () => this.setState({ sel: i })
+    }));
+
+    const current = {
+      title: ev.title, meta: ev.meta, intro: ev.intro, role: ev.role, color: ev.color,
+      bg1: url(im[0]), bg2: url(im[1]), bg3: url(im[2]), bg4: url(im[3]),
+      scopeCount: String(ev.scope.length).padStart(2, "0") + " items",
+      scope: ev.scope.map((s, i2) => {
+        const n = String(i2 + 1).padStart(2, "0");
+        if (typeof s === "string") return { n, text: s, hasSub: false, sub: [], color: ev.color };
+        return { n, text: s.text, hasSub: true, sub: s.sub, color: ev.color };
+      })
+    };
+
+    return {
+      events, current,
+      hasImages: im.length > 0,
+      noImages: im.length === 0,
+      showStats: this.props.showStats ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>
