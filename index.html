@@ -98,7 +98,7 @@
 
       <div style="position: sticky; top: 84px; display: flex; flex-direction: column;">
         <sc-for list="{{ events }}" as="ev" hint-placeholder-count="7">
-          <div onClick="{{ ev.select }}" onMouseEnter="{{ ev.select }}" style="display: grid; grid-template-columns: 46px minmax(0, 1fr) 10px; align-items: center; gap: 14px; padding: 1.05em 0; border-bottom: 1px solid #232323; cursor: pointer;">
+          <div onClick="{{ ev.select }}" style="display: grid; grid-template-columns: 46px minmax(0, 1fr) 10px; align-items: center; gap: 14px; padding: 1.05em 0; border-bottom: 1px solid #232323; cursor: pointer;">
             <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: {{ ev.color }};">{{ ev.num }}</span>
             <span style="font-family: 'Bodoni Moda', serif; font-size: clamp(21px, 2.1vw, 34px); line-height: 1.06; text-transform: uppercase; letter-spacing: -0.01em; transition: color 0.3s ease, transform 0.35s cubic-bezier(0.2,0.8,0.2,1); color: {{ ev.titleColor }}; transform: {{ ev.shift }};">{{ ev.title }}</span>
             <span style="width: 10px; height: 10px; transition: background 0.3s ease; background: {{ ev.dot }};"></span>
