@@ -104,7 +104,7 @@
 
       <div style="position: sticky; top: 100px; display: flex; flex-direction: column; gap: 4px;">
         <sc-for list="{{ events }}" as="ev" hint-placeholder-count="7">
-          <div onClick="{{ ev.select }}" onMouseEnter="{{ ev.select }}" style="display: grid; grid-template-columns: 52px minmax(0, 1fr); align-items: baseline; column-gap: 12px; padding: 1.1em 18px; cursor: pointer; transition: background 0.6s ease; background: {{ ev.rowBg }};">
+          <div onClick="{{ ev.select }}" style="display: grid; grid-template-columns: 52px minmax(0, 1fr); align-items: baseline; column-gap: 12px; padding: 1.1em 18px; cursor: pointer; transition: background 0.6s ease; background: {{ ev.rowBg }};">
             <span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: #E8B4B0;">N° {{ ev.num }}</span>
             <span style="font-family: Italiana, serif; font-size: clamp(21px, 1.9vw, 30px); line-height: 1.1; text-transform: uppercase; letter-spacing: 0.02em; transition: color 0.5s ease, transform 0.7s cubic-bezier(0.22,0.7,0.2,1); color: {{ ev.titleColor }}; transform: {{ ev.shift }};">{{ ev.title }}</span>
             <span style="grid-column: 2; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #B7A7A8; margin-top: 8px;">{{ ev.meta }}</span>
@@ -112,7 +112,7 @@
         </sc-for>
       </div>
 
-      <div style="display: flex; flex-direction: column; gap: 3vw; min-width: 0;">
+      <div data-event-detail="" style="display: flex; flex-direction: column; gap: 3vw; min-width: 0;">
 
         <div style="position: relative; padding-bottom: 7vw;">
           <sc-if value="{{ hasImages }}" hint-placeholder-val="{{ true }}">
@@ -428,7 +428,14 @@ class Component extends DCLogic {
       titleColor: i === sel ? "#FFFFFF" : "#CDBFC0",
       shift: i === sel ? "translateX(12px)" : "none",
       rowBg: i === sel ? e.color : "transparent",
-      select: () => { if (this.state.sel !== i) this.setState({ sel: i }); }
+      select: () => {
+        if (this.state.sel === i) return;
+        this.setState({ sel: i });
+        const d = document.querySelector("[data-event-detail]");
+        if (d && d.getBoundingClientRect().top < 100) {
+          window.scrollTo({ top: d.getBoundingClientRect().top + window.scrollY - 100, behavior: "smooth" });
+        }
+      }
     }));
 
     const current = {
